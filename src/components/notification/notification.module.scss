@@ -14,13 +14,17 @@
 
 .container {
     @include flex-centered;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     margin: 0.5rem;
     border-left-style: solid;
     border-left-color: $dixa-blue;
 }
 
-.title,
-.description {
-    margin: 0;
+.icon {
+    margin: 0 1rem;
+}
+
+.close {
+    margin-left: auto;
+    margin-right: 0.5rem;
 }

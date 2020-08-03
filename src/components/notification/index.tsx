@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import styles from './notification.module.scss';
+import Icon from '../icon';
 
 interface Props {
   className?: Optional<string>;
   color?: string;
+  iconKey?: string;
 }
 
 const Notification: FC<Props> = (props) => {
-  const { className, color, ...otherProps } = props;
+  const { className, color, iconKey, children, ...otherProps } = props;
 
   const rootClass = classnames(
     {
@@ -28,12 +30,9 @@ const Notification: FC<Props> = (props) => {
   return (
     <div {...otherProps} className={rootClass}>
       <div className={styles.container} style={containerStyle}>
-        <div>#</div>
-        <div className={styles.message}>
-          <h4 className={styles.title}>Title</h4>
-          <p className={styles.description}>Description</p>
-        </div>
-        <div>x</div>
+        {!!iconKey && <Icon name={iconKey} className={styles.icon} />}
+        <div className={styles.message}>{children}</div>
+        <Icon name="times" className={styles.close} />
       </div>
     </div>
   );
