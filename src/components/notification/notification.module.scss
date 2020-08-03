@@ -10,6 +10,7 @@
     margin: 0.5rem;
     font-family: "Open Sans", sans-serif;
     color: $dixa-black;
+    animation: move 1s ease-in-out;
 }
 
 .container {
@@ -27,4 +28,13 @@
 .close {
     margin-left: auto;
     margin-right: 0.5rem;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-300px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
