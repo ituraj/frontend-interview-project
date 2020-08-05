@@ -6,10 +6,11 @@ interface Props {
   className?: Optional<string>;
   name: string;
   isSolid?: boolean;
+  style?: React.CSSProperties;
 }
 
 const Icon: React.FC<Props> = (props) => {
-  const { name, className, isSolid } = props;
+  const { name, className, isSolid, style } = props;
 
   const rootClass = classnames(
     {
@@ -20,7 +21,7 @@ const Icon: React.FC<Props> = (props) => {
     className,
   );
 
-  return <i className={rootClass} />;
+  return <i className={rootClass} style={style} />;
 };
 
 export default Icon;

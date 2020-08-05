@@ -40,18 +40,20 @@ const Notification: FC<Props> = (props) => {
 
   const containerStyle: Record<string, unknown> = {
     borderLeftColor: undefined,
-    color: undefined,
   };
 
   if (color && color.length) {
     containerStyle.borderLeftColor = color;
-    containerStyle.color = color;
   }
 
   return (
     <div {...otherProps} className={rootClass}>
       <div className={styles.container} style={containerStyle}>
-        {!!iconKey && <Icon name={iconKey} className={styles.icon} />}
+        {!!iconKey && (
+          <span style={{ color }}>
+            <Icon name={iconKey} className={styles.icon} />
+          </span>
+        )}
         <div className={styles.message}>{children}</div>
         <button className={styles.btn} onClick={handleClose}>
           {mode !== 'auto-hide' && (

@@ -31,7 +31,6 @@ const titleStyle: Record<string, unknown> = {
   letterSpacing: 'normal',
   margin: '0',
   marginBottom: '0.2rem',
-  color: '#191919',
 };
 
 const descriptionStyle: Record<string, unknown> = {
@@ -39,7 +38,6 @@ const descriptionStyle: Record<string, unknown> = {
   fontSize: '12px',
   letterSpacing: '0.3px',
   margin: '0',
-  color: '#191919',
 };
 
 export const info: React.FC = () => (

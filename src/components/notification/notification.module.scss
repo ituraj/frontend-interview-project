@@ -61,6 +61,8 @@
   animation: slideOut 1500ms ease-in-out;
 }
 
+// Hide text during notification animation
+
 @keyframes handleText {
   0% {
     visibility: hidden;
@@ -72,6 +74,8 @@
     visibility: visible;
   }
 }
+
+// Notification animation
 
 @keyframes slideIn {
   0% {
